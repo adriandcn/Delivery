@@ -1,0 +1,14 @@
+SELECT 
+reserva.id as id,
+CONCAT(reserva.c_name, ' ', reserva.c_lastname) as nombre, 
+reserva.calendar_id as calendar_id, 
+reserva.c_cedula as cedula, 
+reserva.c_email as email, 
+reserva.c_phone as telefono,
+reserva.amount as monto,
+reserva.date_from as fechareserva 
+FROM booking_abcalendar_reservations reserva
+LEFT JOIN booking_abcalendar_payment_bank ON reserva.id = booking_abcalendar_payment_bank.reserva_id
+LEFT JOIN booking_abcalendar_payment_operators ON reserva.id = booking_abcalendar_payment_operators.reserva_id
+ORDER BY reserva.id DESC
+
