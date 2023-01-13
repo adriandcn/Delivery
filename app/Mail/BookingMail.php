@@ -52,52 +52,96 @@ class BookingMail extends Mailable
             $numeroCupon = $cupon[0]->codigo;
             $porcentaje = $cupon[0]->cantidad;
             $fechaExpiracion = date('d M Y', strtotime($cupon[0]->fecha_expiracion));
+
+              //$message = $this->markdown('emails.booking')
+        $message = $this->view('emails.booking')
+        ->subject(utf8_decode(config('constants.subject_booking')))
+        ->with('url', $this->urlConsulta)
+        ->with('uuid', $this->infoReservas[0]->uuid)
+        ->with('nombretour',$this->infoAgrupamiento[0]->nombre_eng)
+        ->with('detalletour',$this->infoAgrupamiento[0]->descripcion_eng)
+        ->with('nombreoperador',$this->infoReserva2[0]->nombre_contacto_operador_1)
+        ->with('empresaoperador',$this->infoReserva2[0]->nombre_empresa_operador)
+        ->with('direccionoperador',$this->infoReserva2[0]->direccion_empresa_operador)
+        ->with('telefonooperador',$this->infoReserva2[0]->telf_contacto_operador_1)
+        ->with('correooperador',$this->infoReserva2[0]->email_contacto_operador)
+        ->with('nombrecalendario',$this->infoPago[0]->nombre_calendario)
+        ->with('nombrepara', $this->infoReservas[0]->c_name." ".$this->infoReservas[0]->c_lastname)
+        ->with('correo',$this->infoReservas[0]->c_email)
+        ->with('desde',$this->infoReservas[0]->date_from)
+        ->with('hasta',$this->infoReservas[0]->date_to)
+        ->with('adultos',$this->infoReservas[0]->c_adults)
+        ->with('ninos',$this->infoReservas[0]->c_children)
+        ->with('estadoreserva','Confirmada')
+        ->with('fechapago',$this->infoPago[0]->fecha_pago)
+        ->with('montopago',$this->infoReservas[0]->amount)
+        ->with('cupon',$numeroCupon)
+        ->with('porcentaje',$porcentaje)
+        ->with('fechaExpiracion',$fechaExpiracion)
+        ->with('lat',$this->infoAgrupamiento[0]->lat)
+        ->with('lng',$this->infoAgrupamiento[0]->lng)
+        ->with('instruccion',$this->infoAgrupamiento[0]->instrucciones_eng)
+        ->with('facebookImg',public_path('/img/facebook.png'))
+        ->with('instagramImg',public_path('/img/instagram.png'))
+        ->with('logoImg',public_path('img/logo_iwana.png'))
+        ->with('logoMap',public_path('img/google-maps.jpg'))
+        ->with('title',utf8_decode(config('constants.title_booking')))
+        // TODO: DESCOMENTAR ESTO PARA SACAR DESDE EL DISCO LOCAL
+        // ->attach($this->pdf_es)
+        // ->attach($this->pdf_en);
+        // TODO: DESCOMENTAR ESTO PARA SACAR DESDE S3
+        ->attachFromStorageDisk('s3', $this->pdf_es)
+        ->attachFromStorageDisk('s3', $this->pdf_en);
+
+return $message; //Send mail
         }else{
             $numeroCupon = 0;
             $porcentaje = 0;
             $fechaExpiracion = null;
+
+              //$message = $this->markdown('emails.booking')
+        $message = $this->view('emails.booking')
+        ->subject(utf8_decode(config('constants.subject_booking')))
+        ->with('url', $this->urlConsulta)
+        ->with('uuid', $this->infoReservas[0]->uuid)
+        ->with('nombretour',$this->infoAgrupamiento[0]->nombre_eng)
+        ->with('detalletour',$this->infoAgrupamiento[0]->descripcion_eng)
+        ->with('nombreoperador',$this->infoReserva2[0]->nombre_contacto_operador_1)
+        ->with('empresaoperador',$this->infoReserva2[0]->nombre_empresa_operador)
+        ->with('direccionoperador',$this->infoReserva2[0]->direccion_empresa_operador)
+        ->with('telefonooperador',$this->infoReserva2[0]->telf_contacto_operador_1)
+        ->with('correooperador',$this->infoReserva2[0]->email_contacto_operador)
+        ->with('nombrecalendario',$this->infoPago[0]->nombre_calendario)
+        ->with('nombrepara', $this->infoReservas[0]->c_name." ".$this->infoReservas[0]->c_lastname)
+        ->with('correo',$this->infoReservas[0]->c_email)
+        ->with('desde',$this->infoReservas[0]->date_from)
+        ->with('hasta',$this->infoReservas[0]->date_to)
+        ->with('adultos',$this->infoReservas[0]->c_adults)
+        ->with('ninos',$this->infoReservas[0]->c_children)
+        ->with('estadoreserva','Confirmada')
+        ->with('fechapago',$this->infoPago[0]->fecha_pago)
+        ->with('montopago',$this->infoReservas[0]->amount)
+        ->with('cupon',$numeroCupon)
+        ->with('porcentaje',$porcentaje)
+        ->with('fechaExpiracion','00')
+        ->with('lat',$this->infoAgrupamiento[0]->lat)
+        ->with('lng',$this->infoAgrupamiento[0]->lng)
+        ->with('instruccion',$this->infoAgrupamiento[0]->instrucciones_eng)
+        ->with('facebookImg',public_path('/img/facebook.png'))
+        ->with('instagramImg',public_path('/img/instagram.png'))
+        ->with('logoImg',public_path('img/logo_iwana.png'))
+        ->with('logoMap',public_path('img/google-maps.jpg'))
+        ->with('title',utf8_decode(config('constants.title_booking')))
+        // TODO: DESCOMENTAR ESTO PARA SACAR DESDE EL DISCO LOCAL
+        // ->attach($this->pdf_es)
+        // ->attach($this->pdf_en);
+        // TODO: DESCOMENTAR ESTO PARA SACAR DESDE S3
+        ->attachFromStorageDisk('s3', $this->pdf_es)
+        ->attachFromStorageDisk('s3', $this->pdf_en);
+
+return $message; //Send mail
         }
 
-        //$message = $this->markdown('emails.booking')
-        $message = $this->view('emails.booking')
-                        ->subject(utf8_decode(config('constants.subject_booking')))
-                        ->with('url', $this->urlConsulta)
-                        ->with('uuid', $this->infoReservas[0]->uuid)
-                        ->with('nombretour',$this->infoAgrupamiento[0]->nombre_eng)
-                        ->with('detalletour',$this->infoAgrupamiento[0]->descripcion_eng)
-                        ->with('nombreoperador',$this->infoReserva2[0]->nombre_contacto_operador_1)
-                        ->with('empresaoperador',$this->infoReserva2[0]->nombre_empresa_operador)
-                        ->with('direccionoperador',$this->infoReserva2[0]->direccion_empresa_operador)
-                        ->with('telefonooperador',$this->infoReserva2[0]->telf_contacto_operador_1)
-                        ->with('correooperador',$this->infoReserva2[0]->email_contacto_operador)
-                        ->with('nombrecalendario',$this->infoPago[0]->nombre_calendario)
-                        ->with('nombrepara', $this->infoReservas[0]->c_name." ".$this->infoReservas[0]->c_lastname)
-                        ->with('correo',$this->infoReservas[0]->c_email)
-                        ->with('desde',$this->infoReservas[0]->date_from)
-                        ->with('hasta',$this->infoReservas[0]->date_to)
-                        ->with('adultos',$this->infoReservas[0]->c_adults)
-                        ->with('ninos',$this->infoReservas[0]->c_children)
-                        ->with('estadoreserva','Confirmada')
-                        ->with('fechapago',$this->infoPago[0]->fecha_pago)
-                        ->with('montopago',$this->infoReservas[0]->amount)
-                        ->with('cupon',$numeroCupon)
-                        ->with('porcentaje',$porcentaje)
-                        ->with('fechaExpiracion',$fechaExpiracion)
-                        ->with('lat',$this->infoAgrupamiento[0]->lat)
-                        ->with('lng',$this->infoAgrupamiento[0]->lng)
-                        ->with('instruccion',$this->infoAgrupamiento[0]->instrucciones_eng)
-                        ->with('facebookImg',public_path('/img/facebook.png'))
-                        ->with('instagramImg',public_path('/img/instagram.png'))
-                        ->with('logoImg',public_path('img/logo_iwana.png'))
-                        ->with('logoMap',public_path('img/google-maps.jpg'))
-                        ->with('title',utf8_decode(config('constants.title_booking')))
-                        // TODO: DESCOMENTAR ESTO PARA SACAR DESDE EL DISCO LOCAL
-                        // ->attach($this->pdf_es)
-                        // ->attach($this->pdf_en);
-                        // TODO: DESCOMENTAR ESTO PARA SACAR DESDE S3
-                        ->attachFromStorageDisk('s3', $this->pdf_es)
-                        ->attachFromStorageDisk('s3', $this->pdf_en);
-
-        return $message; //Send mail
+      
     }
 }
