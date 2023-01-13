@@ -55,6 +55,7 @@ class BookingMail extends Mailable
         }else{
             $numeroCupon = 0;
             $porcentaje = 0;
+            $fechaExpiracion = null;
         }
 
         //$message = $this->markdown('emails.booking')
