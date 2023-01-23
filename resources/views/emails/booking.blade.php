@@ -344,9 +344,12 @@
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Name:</strong> {{$nombretour}}<br>
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Service Name:</strong> {{$nombrecalendario}}<br>
                                                                                 </p>
-                                                                                <pre>                                                                          
+                                                                                <dl class="product-meta">
+                                                                            <pre style="padding: 9.5px;text-align: justify;word-break: inherit;white-space: pre-line;word-wrap: inherit;font-family: arial;border: 0 solid;"
+                                                                                class="mores"> 
                                                                                 <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> {{$detalletour}}<br><br>
-                                                                                </pre>
+                                                                            </pre>
+                                                                        </dl>
                                                                                 <br>
                                                                             <p><strong style="text-transform: uppercase;">Operator Contact Details</strong> <hr style="border-color: #e04727;">
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Name:</strong> {{$nombreoperador}}<br>
