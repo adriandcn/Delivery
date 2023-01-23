@@ -72,11 +72,11 @@ class GeneratePDFController extends Controller
         //     $textodocumento = "<center><img src='http://ec2-3-81-214-161.compute-1.amazonaws.com:81/public/imges/icon/". $consultaLogoOperador[0]->filename."'></center>";
         // }
 
-        $textodocumento = "<center><img src='http://ec2-3-81-214-161.compute-1.amazonaws.com:81/public/img/index-logo.png'></center>";
+        $textodocumento = "<center><img src='https://iwannatrip.s3.us-east-1.amazonaws.com/images/img/index-logo.png'></center>";
         $textodocumento .= "<center><h1>Confirmaci&oacute;n de la Reservaci&oacute;n Sistema de Booking iWaNaTrip.com</h1></center>";
         $textodocumento .= "<h3>Informaci&oacute;n del Operador del Servicio:</h3>";
         $textodocumento .= "<p><b>Nombre del Tour:</b> ".$infoAgrupamiento[0]->nombre."</p>";
-        $textodocumento .= "<p><b>Detalle del Tour:</b> ".$infoAgrupamiento[0]->descripcion."</p>";
+        $textodocumento .= "<pre><b>Detalle del Tour:</b> ".$infoAgrupamiento[0]->descripcion."</pre>";
         $textodocumento .= "<p><b>Nombre del Operador:</b> ".$infoReserva2[0]->nombre_contacto_operador_1."</p>";
         $textodocumento .= "<p><b>Empresa del Operador:</b> ".$infoReserva2[0]->nombre_empresa_operador."</p>";
         $textodocumento .= "<p><b>Direcci&oacute;n del Operador:</b> ".$infoReserva2[0]->direccion_empresa_operador."</p>";
@@ -122,11 +122,11 @@ class GeneratePDFController extends Controller
         //     $textodocumento = "<center><img src='http://ec2-3-81-214-161.compute-1.amazonaws.com:81/public/imges/icon/". $consultaLogoOperador[0]->filename."'></center>";
         // }
 
-        $textodocumento = "<center><img src='http://ec2-3-81-214-161.compute-1.amazonaws.com:81/public/img/index-logo.png'></center>";
+        $textodocumento = "<center><img src='https://iwannatrip.s3.us-east-1.amazonaws.com/images/img/index-logo.png'></center>";
         $textodocumento .= "<center><h1>Confirmation of reservation booking system iWaNaTrip.com</h1></center>";
         $textodocumento .= "<h3>Service Operator Information</h3>";
         $textodocumento .= "<p><b>Name of the Tour:</b> ".$infoAgrupamiento[0]->nombre_eng."</p>";
-        $textodocumento .= "<p><b>Tour Detail:</b> ".$infoAgrupamiento[0]->descripcion_eng."</p>";
+        $textodocumento .= "<pre><b>Tour Detail:</b> ".$infoAgrupamiento[0]->descripcion_eng."</pre>";
         $textodocumento .= "<p><b>Operator Name:</b> ".$infoReserva2[0]->nombre_contacto_operador_1."</p>";
         $textodocumento .= "<p><b>Operator Company:</b> ".$infoReserva2[0]->nombre_empresa_operador."</p>";
         $textodocumento .= "<p><b>Operator Direction:</b> ".$infoReserva2[0]->direccion_empresa_operador."</p>";
