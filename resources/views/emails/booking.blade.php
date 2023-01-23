@@ -345,7 +345,7 @@
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Service Name:</strong> {{$nombrecalendario}}<br>
                                                                                 </p>
                                                                                 <dl class="product-meta">
-                                                                                <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> {{$detalletour}}<br>
+                                                                                <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> {!!$detalletour!!}<br>
                                                                             
                                                                         </dl>
                                                                                 <br>
