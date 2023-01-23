@@ -339,11 +339,11 @@
                                                                         <p>
                                                                             Thank you {{$nombrepara}} for prefering us.
                                                                           </p><br>
-                                                                          <p>
+                                                                          <pre>
                                                                               <strong style="text-transform: uppercase;">Service Information</strong> <hr style="border-color: #e04727;">
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Name:</strong> {{$nombretour}}<br>
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Service Name:</strong> {{$nombrecalendario}}<br>
-                                                                              <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> <pre>{{$detalletour}}</pre><br><br>
+                                                                              <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> {{$detalletour}}<br><br>
 
                                                                               <strong style="text-transform: uppercase;">Operator Contact Details</strong> <hr style="border-color: #e04727;">
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Name:</strong> {{$nombreoperador}}<br>
@@ -373,7 +373,7 @@
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Instructions:</strong> {{$instruccion}}<br><br>
 
 
-                                                                          </p>
+                                                                          </pre>
                                                                           <br>
 
                                                                           @if($porcentaje > 0)
@@ -509,7 +509,7 @@
                                                                     <div class="contentEditable" style='color:#555555;text-align:center;font-size:13px;line-height:19px;'>
                                                                         <p>
                                                                           <a href="{{asset('/')}}" target="_blank">
-                                                                            iwanatrip.com
+                                                                            iwannatrip.com
                                                                           </a>
                                                                         </p>
                                                                     </div>
