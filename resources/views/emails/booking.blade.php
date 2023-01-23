@@ -339,13 +339,16 @@
                                                                         <p>
                                                                             Thank you {{$nombrepara}} for prefering us.
                                                                           </p><br>
-                                                                          <pre>
+                                                                          <p>
                                                                               <strong style="text-transform: uppercase;">Service Information</strong> <hr style="border-color: #e04727;">
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Name:</strong> {{$nombretour}}<br>
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Service Name:</strong> {{$nombrecalendario}}<br>
-                                                                              <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> {{$detalletour}}<br><br>
-
-                                                                              <strong style="text-transform: uppercase;">Operator Contact Details</strong> <hr style="border-color: #e04727;">
+                                                                                </p>
+                                                                                <pre>                                                                          
+                                                                                <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> {{$detalletour}}<br><br>
+                                                                                </pre>
+                                                                                <br>
+                                                                            <p><strong style="text-transform: uppercase;">Operator Contact Details</strong> <hr style="border-color: #e04727;">
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Name:</strong> {{$nombreoperador}}<br>
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Company:</strong> {{$empresaoperador}}<br>
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Address:</strong> {{$direccionoperador}}<br>
@@ -373,7 +376,7 @@
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Instructions:</strong> {{$instruccion}}<br><br>
 
 
-                                                                          </pre>
+                                                                          </p>
                                                                           <br>
 
                                                                           @if($porcentaje > 0)
