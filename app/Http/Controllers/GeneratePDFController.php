@@ -96,7 +96,10 @@ class GeneratePDFController extends Controller
         $textodocumento .= "<p><b>Monto Total de la Reservaci&oacute;n:</b> ".$infoReservas[0]->amount."</p>";
         $textodocumento .= "<br><br><br>";
         $textodocumento .= "<h3>Codigo de la Reservaci&oacute;n:</h3>";
-        $textodocumento .= "<center><img src='https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=".$infoReservas[0]->uuid."&choe=UTF-8' /><center>";
+        
+        $textodocumento .= "<center><img src='https://qrickit.com/api/qr.php?d=https://iwannatrip.com/consultareservacion/".$infoReservas[0]->token_consulta."&txtcolor=442EFF&fgdcolor=76103C&bgdcolor=C0F912&qrsize=150&t=p&e=m'><center>";
+       
+        
         // PDF::loadHTML($textodocumento)->save($pdf_path.'/Reservacion-'.$infoReservas[0]->c_name.'-'.$infoPago[0]->id.'-es.pdf');
 
         $namePdf = 'Reservacion-'.$infoReservas[0]->c_name.'-'.$infoPago[0]->id.'-es.pdf';
@@ -146,7 +149,7 @@ class GeneratePDFController extends Controller
         $textodocumento .= "<p><b>Total Amount Reservation:</b> ".$infoReservas[0]->amount."</p>";
         $textodocumento .= "<br><br><br>";
         $textodocumento .= "<h3>Booking Code:</h3>";
-        $textodocumento .= "<center><img src='https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=".$infoReservas[0]->uuid."&choe=UTF-8' /><center>";
+        $textodocumento .= "<center><img src='https://qrickit.com/api/qr.php?d=https://iwannatrip.com/consultareservacion/".$infoReservas[0]->token_consulta."&txtcolor=442EFF&fgdcolor=76103C&bgdcolor=C0F912&qrsize=150&t=p&e=m'><center>";
         // PDF::loadHTML($textodocumento)->save($pdf_path.'/Reservation-'.$infoReservas[0]->c_name.'-'.$infoPago[0]->id.'-en.pdf');
 
         $namePdf = 'Reservation-'.$infoReservas[0]->c_name.'-'.$infoPago[0]->id.'-en.pdf';
