@@ -345,10 +345,8 @@
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Service Name:</strong> {{$nombrecalendario}}<br>
                                                                                 </p>
                                                                                 <dl class="product-meta">
-                                                                            <pre style="padding: 9.5px;text-align: justify;word-break: inherit;white-space: pre-line;word-wrap: inherit;font-family: arial;border: 0 solid;"
-                                                                                class="mores"> 
-                                                                                <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> {{$detalletour}}<br><br>
-                                                                            </pre>
+                                                                                <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> {{$detalletour}}<br>
+                                                                            
                                                                         </dl>
                                                                                 <br>
                                                                             <p><strong style="text-transform: uppercase;">Operator Contact Details</strong> <hr style="border-color: #e04727;">
