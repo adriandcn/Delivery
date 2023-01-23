@@ -343,7 +343,7 @@
                                                                               <strong style="text-transform: uppercase;">Service Information</strong> <hr style="border-color: #e04727;">
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Name:</strong> {{$nombretour}}<br>
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Service Name:</strong> {{$nombrecalendario}}<br>
-                                                                              <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> {{$detalletour}}<br><br>
+                                                                              <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> <pre>{{$detalletour}}</pre><br><br>
 
                                                                               <strong style="text-transform: uppercase;">Operator Contact Details</strong> <hr style="border-color: #e04727;">
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Name:</strong> {{$nombreoperador}}<br>
