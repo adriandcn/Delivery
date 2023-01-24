@@ -76,7 +76,7 @@ class GeneratePDFController extends Controller
         $textodocumento .= "<center><h1>Confirmaci&oacute;n de la Reservaci&oacute;n Sistema de Booking iWaNaTrip.com</h1></center>";
         $textodocumento .= "<h3>Informaci&oacute;n del Operador del Servicio:</h3>";
         $textodocumento .= "<p><b>Nombre del Tour:</b> ".$infoAgrupamiento[0]->nombre."</p>";
-        $textodocumento .= "<pre><b>Detalle del Tour:</b> ".$infoAgrupamiento[0]->descripcion."</pre>";
+        $textodocumento .= "<div style='width:250px;text-align: justify;'><pre><b>Detalle del Tour:</b> ".$infoAgrupamiento[0]->descripcion."</pre></div>";
         $textodocumento .= "<p><b>Nombre del Operador:</b> ".$infoReserva2[0]->nombre_contacto_operador_1."</p>";
         $textodocumento .= "<p><b>Empresa del Operador:</b> ".$infoReserva2[0]->nombre_empresa_operador."</p>";
         $textodocumento .= "<p><b>Direcci&oacute;n del Operador:</b> ".$infoReserva2[0]->direccion_empresa_operador."</p>";
@@ -129,7 +129,7 @@ class GeneratePDFController extends Controller
         $textodocumento .= "<center><h1>Confirmation of reservation booking system iWaNaTrip.com</h1></center>";
         $textodocumento .= "<h3>Service Operator Information</h3>";
         $textodocumento .= "<p><b>Name of the Tour:</b> ".$infoAgrupamiento[0]->nombre_eng."</p>";
-        $textodocumento .= "<pre><b>Tour Detail:</b> ".$infoAgrupamiento[0]->descripcion_eng."</pre>";
+        $textodocumento .= "<div style='width:250px;text-align: justify;'><pre><b>Tour Detail:</b> ".$infoAgrupamiento[0]->descripcion_eng."</pre></div>";
         $textodocumento .= "<p><b>Operator Name:</b> ".$infoReserva2[0]->nombre_contacto_operador_1."</p>";
         $textodocumento .= "<p><b>Operator Company:</b> ".$infoReserva2[0]->nombre_empresa_operador."</p>";
         $textodocumento .= "<p><b>Operator Direction:</b> ".$infoReserva2[0]->direccion_empresa_operador."</p>";
