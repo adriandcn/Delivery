@@ -344,7 +344,7 @@
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Name:</strong> {{$nombretour}}<br>
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Service Name:</strong> {{$nombrecalendario}}<br>
                                                                                 </p>
-                                                                                <div class="product-meta" style="width:250px;text-align: justify;">
+                                                                                <div class="product-meta" style="width:500px;text-align: justify;">
                                                                                 <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> {!!$detalletour!!}<br>
                                                                             
                                                                                 </div>
