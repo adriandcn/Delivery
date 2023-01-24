@@ -344,10 +344,10 @@
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Name:</strong> {{$nombretour}}<br>
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Service Name:</strong> {{$nombrecalendario}}<br>
                                                                                 </p>
-                                                                                <dl class="product-meta">
+                                                                                <div class="product-meta" style=" text-align: justify;">
                                                                                 <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Tour Detail:</strong> {!!$detalletour!!}<br>
                                                                             
-                                                                        </dl>
+                                                                                </div>
                                                                                 <br>
                                                                             <p><strong style="text-transform: uppercase;">Operator Contact Details</strong> <hr style="border-color: #e04727;">
                                                                               <strong style="margin-left: 15px;"><span style="color:#d7360f;">*</span>Name:</strong> {{$nombreoperador}}<br>
