@@ -77,7 +77,7 @@ class GeneratePDFController extends Controller
         $textodocumento .= "<h3>Informaci&oacute;n del Operador del Servicio:</h3>";
         $textodocumento .= "<p><b>Nombre del Tour:</b> ".$infoAgrupamiento[0]->nombre."</p>";
 
-        $textodocumento .= "<div style='width:600px;'><pre><b>Detalle del Tour:</b></br> <code>".$infoAgrupamiento[0]->descripcion."</code></pre></div>";
+        $textodocumento .= $infoAgrupamiento[0]->descripcion;
         $textodocumento .= "<p><b>Nombre del Operador:</b> ".$infoReserva2[0]->nombre_contacto_operador_1."</p>";
         $textodocumento .= "<p><b>Empresa del Operador:</b> ".$infoReserva2[0]->nombre_empresa_operador."</p>";
         $textodocumento .= "<p><b>Direcci&oacute;n del Operador:</b> ".$infoReserva2[0]->direccion_empresa_operador."</p>";
