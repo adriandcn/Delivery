@@ -76,7 +76,7 @@ class GeneratePDFController extends Controller
         $textodocumento .= "<center><h1>Confirmaci&oacute;n de la Reservaci&oacute;n Sistema de Booking iWaNaTrip.com</h1></center>";
         $textodocumento .= "<h3>Informaci&oacute;n del Operador del Servicio:</h3>";
         $textodocumento .= "<p><b>Nombre del Tour:</b> ".$infoAgrupamiento[0]->nombre."</p>";
-        $textodocumento .= "<div style='width:400px;text-align: justify;'><pre><b>Detalle del Tour:</b> ".$infoAgrupamiento[0]->descripcion."</pre></div>";
+        $textodocumento .= "<div style='width:400px;text-align:justify;'><pre><code><b>Detalle del Tour:</b> ".$infoAgrupamiento[0]->descripcion."</code></pre></div>";
         $textodocumento .= "<p><b>Nombre del Operador:</b> ".$infoReserva2[0]->nombre_contacto_operador_1."</p>";
         $textodocumento .= "<p><b>Empresa del Operador:</b> ".$infoReserva2[0]->nombre_empresa_operador."</p>";
         $textodocumento .= "<p><b>Direcci&oacute;n del Operador:</b> ".$infoReserva2[0]->direccion_empresa_operador."</p>";
