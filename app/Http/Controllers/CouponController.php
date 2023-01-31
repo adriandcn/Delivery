@@ -49,12 +49,12 @@ class CouponController extends Controller
             $datetime2 = new \DateTime(date("Y-m-d H:i:s"));            
             $difference = $datetime1->diff($datetime2);
             $horasDiferencia = $difference->h;           
-            if($horasDiferencia >= 1){
+            if($horasDiferencia >= 6){
                 // TOKEN CADUCADO
-                print_r($horasDiferencia);
+              
                 return false;
             }else{
-                print_r('true');
+               
                 return true;
                 
             }
