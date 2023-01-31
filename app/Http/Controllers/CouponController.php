@@ -21,6 +21,7 @@ class CouponController extends Controller
 
     public function index($token)
     {
+        
         $validToken = $this->validToken($token);
         if(!$validToken){
             abort(404);
@@ -39,6 +40,7 @@ class CouponController extends Controller
     
     public function validToken($token){     
         $reg = $this->gestion->verificarTokenDelivery($token);  
+        dd($reg);
         if(empty($reg)){
             // EL TOKEN NO EXISTE            
             return false;
