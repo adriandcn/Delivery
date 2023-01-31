@@ -125,7 +125,7 @@
     
     var SITEURL = '{{URL::to('')}}';
     var token = '{!! $token !!}';
-
+    $.fn.dataTable.ext.errMode = 'throw';
     $(document).ready(function() {
 
         $.ajaxSetup({
