@@ -40,7 +40,7 @@ class CouponController extends Controller
     
     public function validToken($token){     
         $reg = $this->gestion->verificarTokenDelivery($token);  
-        dd($reg);
+       
         if(empty($reg)){
             // EL TOKEN NO EXISTE            
             return false;
@@ -51,9 +51,12 @@ class CouponController extends Controller
             $horasDiferencia = $difference->h;           
             if($horasDiferencia >= 1){
                 // TOKEN CADUCADO
+                print_r('caducado');
                 return false;
             }else{
+                print_r('true');
                 return true;
+                
             }
         }
     }     
