@@ -51,7 +51,7 @@ class CouponController extends Controller
             $horasDiferencia = $difference->h;           
             if($horasDiferencia >= 1){
                 // TOKEN CADUCADO
-                print_r('caducado');
+                print_r($horasDiferencia);
                 return false;
             }else{
                 print_r('true');
