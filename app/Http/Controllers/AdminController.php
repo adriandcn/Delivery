@@ -79,7 +79,7 @@ class AdminController extends Controller
             $datetime2 = new \DateTime(date("Y-m-d H:i:s"));            
             $difference = $datetime1->diff($datetime2);
             $horasDiferencia = $difference->h;           
-            if($horasDiferencia >= 1){
+            if($horasDiferencia >= 6){
                 // TOKEN CADUCADO
                 return false;
             }else{
