@@ -2341,7 +2341,8 @@ else
                                                 reserva.c_email as email, 
                                                 reserva.c_phone as telefono,
                                                 reserva.amount as monto,
-                                                reserva.date_from as fechareserva 
+                                                reserva.date_from as fechareserva, 
+                                                reserva.c_notes as notes 
                                                 FROM delivery_book db, booking_abcalendar_reservations reserva
                                                 WHERE db.id_reserva = reserva.id
                                                 ORDER BY db.created_at DESC"));

@@ -41,6 +41,7 @@
                             <th>Teléfono</th>
                             <th>Monto</th>
                             <th>Fecha</th>
+                            <th>Notas</th>
                             <th width="100px"></th>
                         </tr>
                     </thead>
@@ -116,6 +117,7 @@
                 { data: 'telefono', name: 'telefono' },
                 { data: 'monto', name: 'monto' },
                 { data: 'fechareserva', name: 'fechareserva' },
+                { data: 'notes', name: 'notes' },
                 { data: 'action', name: 'action', orderable: false, searchable: false }             
             ],         
             order: [[0, 'desc']]
