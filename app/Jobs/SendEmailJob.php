@@ -25,7 +25,7 @@ class SendEmailJob implements ShouldQueue
 
     protected $id_reserva;
     protected $id_table_delivery;
-    public $tries = 2;
+    public $tries = 1;
 
     /**
      * Create a new job instance.
