@@ -29,6 +29,7 @@ class PaymentController extends Controller
         }else{
             if(request()->ajax()) {
                 $pagos = $this->gestion->getAllReservationsPayments(0);
+                print_r("ddd12");
                 dd($pagos);
                 return Datatables::of($pagos)
                                     ->addIndexColumn()
