@@ -71,11 +71,11 @@
                         </div>
                         </br>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" id="c_envOper" name="c_email" placeholder="Enviado Operador" required="">
+                            <input type="text" class="form-control" id="c_envOper" name="c_envOper" placeholder="Enviado Operador" required="">
                         </div>
                         </br>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" id="c_confOper" name="c_email" placeholder="Confirmado Operador" required="">
+                            <input type="text" class="form-control" id="c_confOper" name="c_confOper" placeholder="Confirmado Operador" required="">
                         </div>
                     </div>                      
                     
@@ -150,6 +150,8 @@
                 $('#ajax-crud-modal').modal('show');
                 $('#reserva_id').val(data.id);
                 $('#c_email').val(data.c_email);
+                $('#c_envOper').val(data.c_envOper);
+                $('#c_confOper').val(data.c_confOper);
             })
         });  
 
