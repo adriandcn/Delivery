@@ -2364,30 +2364,10 @@ else
 
     public function getAllReservationsPayments($id){
 
-        print_r("hello");
-        exit;
+      
         if($id > 0){
-            $results = DB::select( DB::raw("SELECT reserva.id as id,
-            CONCAT(COALESCE(reserva.c_name,' '), ' ', COALESCE(reserva.c_lastname,' ')) as nombre, 
-            reserva.calendar_id as calendar_id, 
-            reserva.c_cedula as cedula, 
-            reserva.c_email as email, 
-            reserva.c_phone as telefono,
-            (reserva.c_adults + reserva.c_children) as pasajeros,
-            reserva.amount as monto,
-            reserva.date_from as fechareserva,
-            reserva.created as fecharcompra,
-            COALESCE(booking_abcalendar_payment_bank.cantidad, 0) as pgobanco,
-            booking_abcalendar_payment_bank.fecha as fechapagobanco,
-            COALESCE(booking_abcalendar_payment_operators.cantidad, 0) as pagooperador,
-            booking_abcalendar_payment_operators.fecha_pago as fechapagooperador,
-            booking_abcalendar_payment_operators.observaciones as observaciones
-            FROM booking_abcalendar_reservations reserva
-            LEFT JOIN booking_abcalendar_payment_bank ON reserva.id = booking_abcalendar_payment_bank.reserva_id
-            LEFT JOIN booking_abcalendar_payment_operators ON reserva.id = booking_abcalendar_payment_operators.reserva_id
-            WHERE reserva.status = 'Confirmed'            
-            AND reserva.id = $id
-            ORDER BY reserva.id DESC"));
+            $results = DB::select( DB::raw("SELECT id_agrupamiento FROM booking_abcalendar_calendars WHERE id = $id_calendar"));
+    
         }else{
             $results = DB::select( DB::raw("SELECT id_agrupamiento FROM booking_abcalendar_calendars WHERE id = $id_calendar"));
     
