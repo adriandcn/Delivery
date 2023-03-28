@@ -2364,6 +2364,7 @@ else
 
     public function getAllReservationsPayments($id){
 
+        print_r("hello");
         if($id > 0){
             $results = DB::select( DB::raw("SELECT reserva.id as id,
             CONCAT(COALESCE(reserva.c_name,' '), ' ', COALESCE(reserva.c_lastname,' ')) as nombre, 
