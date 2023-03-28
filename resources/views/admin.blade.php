@@ -69,9 +69,11 @@
                         <div class="col-sm-12">
                             <input type="text" class="form-control" id="c_email" name="c_email" placeholder="Ingrese Correo" required="">
                         </div>
+                        </br>
                         <div class="col-sm-12">
                             <input type="text" class="form-control" id="c_envOper" name="c_email" placeholder="Enviado Operador" required="">
                         </div>
+                        </br>
                         <div class="col-sm-12">
                             <input type="text" class="form-control" id="c_confOper" name="c_email" placeholder="Confirmado Operador" required="">
                         </div>
