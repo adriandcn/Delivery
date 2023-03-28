@@ -2408,6 +2408,7 @@ else
             WHERE reserva.status = 'Confirmed'
             ORDER BY reserva.id DESC"));
         }
+        dd($results);
 
         foreach($results as $key => $value){
             $nombreCalendario = $this->getCalendarName($value->calendar_id);
