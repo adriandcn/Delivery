@@ -99,12 +99,14 @@ class AdminController extends Controller
     
     public function store(Request $request)
     {  
-        print_r($request);
-     $reserva =  Booking_abcalendar_reservation::updateOrCreate(['id' =>  $request->reserva_id],
+        
+        $reserva =  Booking_abcalendar_reservation::updateOrCreate(['id' => $request->reserva_id ],
         [   'c_envOper' =>  $request->c_envOper, 'c_confOper' => $request->c_confOper,
-            'c_email' => $request->c_email
-        ]);        
-    return Response::json($reserva);
+        'c_email' => $request->c_email
+    ]); 
+        return Response::json($request->c_email);   
+        
+        
 
 
     }
