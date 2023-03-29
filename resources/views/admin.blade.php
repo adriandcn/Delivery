@@ -32,10 +32,7 @@
                 <table id="correos" class="table table-hover table-condensed">
                     <thead class="table-success">
                         <tr >
-    
-                        <th>                    <a href="javascript:void(0)" data-toggle="tooltip"  data-id="{{ $id_reserva }}" data-original-title="Editar correo" class="edit btn btn-success edit-user-correo">
-    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>        
-</a></th>
+                        
                             <th>ID Reserva</th>
                             <th>Enviado Operador</th>
                             <th>Confirmado Operador</th>
