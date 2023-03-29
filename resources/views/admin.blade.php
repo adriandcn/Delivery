@@ -151,9 +151,8 @@
      
             $.get('/correos/edit/' + reserva_id, function (data) {
                 $('#userCrudModal').html("Editar Correo");
-                alert(data.c_email);
-                alert(data.c_envOper);
-                alert(data.c_confOper);
+                alert(JSON.stringify(data));
+              
                 $('#btn-save').val("edit-user-correo");
                 $('#ajax-crud-modal').modal('show');
                 $('#reserva_id').val(data.id);
