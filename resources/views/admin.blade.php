@@ -72,11 +72,11 @@
                         </div>
                         </br>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" id="c_envOper" name="c_envOper" placeholder="Enviado Operador" required="">
+                            <input type="text"  id="c_envOper" name="c_envOper" placeholder="Enviado Operador" >
                         </div>
                         </br>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" id="c_confOper" name="c_confOper" placeholder="Confirmado Operador" required="">
+                            <input type="text"  id="c_confOper" name="c_confOper" placeholder="Confirmado Operador">
                         </div>
                     </div>                      
                     
