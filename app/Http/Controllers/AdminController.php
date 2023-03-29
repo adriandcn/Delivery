@@ -114,7 +114,7 @@ class AdminController extends Controller
     public function editCorreo($id)
     {   
         $where = array('id' => $id);
-        $reserva  = Booking_abcalendar_reservation::where($where)->select('id','c_email')->first();
+        $reserva  = Booking_abcalendar_reservation::where($where)->select('id','c_email','c_envOper','c_confOper')->first();
         return Response::json($reserva);
     }    
 
