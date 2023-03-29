@@ -40,7 +40,6 @@
                             <th>Cliente</th>
                             <th>Cedula</th>
                             <th>Email</th>
-                            
                             <th>Monto</th>
                             <th>Fecha</th>
                             <th>Notas</th>
