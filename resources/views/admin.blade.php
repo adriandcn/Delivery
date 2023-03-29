@@ -148,6 +148,7 @@
         /* When click edit coupon */
         $('body').on('click', '.edit-user-correo', function () {
             var reserva_id = $(this).data('id');
+            alert(data);
             $.get('/correos/edit/' + reserva_id, function (data) {
                 $('#userCrudModal').html("Editar Correo");
                 $('#btn-save').val("edit-user-correo");
