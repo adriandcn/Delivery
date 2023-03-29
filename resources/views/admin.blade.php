@@ -40,6 +40,7 @@
                             <th>Cliente</th>
                             <th>Cedula</th>
                             <th>Email</th>
+                            
                             <th>Monto</th>
                             <th>Fecha</th>
                             <th>Notas</th>
@@ -72,11 +73,11 @@
                         </div>
                         </br>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" id="c_envOper" name="c_envOper" placeholder="Enviado Operador" >
+                            <input type="text" class="form-control" id="c_envOper" name="c_envOper" placeholder="Enviado Operador" required="">
                         </div>
                         </br>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" id="c_confOper" name="c_confOper" placeholder="Confirmado Operador">
+                            <input type="text" class="form-control" id="c_confOper" name="c_confOper" placeholder="Confirmado Operador" required="">
                         </div>
                     </div>                      
                     

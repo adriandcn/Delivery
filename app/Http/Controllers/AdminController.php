@@ -106,7 +106,7 @@ class AdminController extends Controller
         [   'c_envOper' =>  $request->c_envOper, 'c_confOper' => $request->c_confOper,
             'c_email' => $request->c_email
         ]);        
-        return Response::json($reserva);
+    return Response::json($reserva);
 
 
     }
