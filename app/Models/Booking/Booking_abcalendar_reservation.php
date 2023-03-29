@@ -20,7 +20,7 @@ class Booking_abcalendar_reservation extends Model  {
      *
      * @var array
      */
-    protected $fillable = ['calendar_id', 'uuid', 'date_from', 'date_to', 'price_based_on', 'c_name', 'c_lastname', 'c_cedula', 'c_email', 'c_phone', 'c_adults', 'c_children', 'c_notes', 'c_address', 'c_city', 'c_country', 'c_state', 'c_zip', 'modified', 'created', 'ip', 'amount', 'deposit', 'tax', 'security', 'payment_method', 'cc_type', 'cc_num', 'cc_exp_month', 'cc_exp_year', 'cc_code', 'txn_id', 'processed_on', 'status', 'locale_id', 'tipo_usuario', 'token_consulta', 'estado_review'];
+    protected $fillable = ['calendar_id', 'uuid', 'date_from', 'date_to', 'price_based_on', 'c_name', 'c_lastname', 'c_cedula', 'c_email', 'c_phone', 'c_adults', 'c_children', 'c_notes', 'c_address', 'c_city', 'c_country', 'c_state', 'c_zip', 'modified', 'created', 'ip', 'amount', 'deposit', 'tax', 'security', 'payment_method', 'cc_type', 'cc_num', 'cc_exp_month', 'cc_exp_year', 'cc_code', 'txn_id', 'processed_on', 'status', 'locale_id', 'tipo_usuario', 'token_consulta', 'estado_review', 'c_confOper', 'c_envOper'];
 
     /**
      * The attributes excluded from the model's JSON form.
