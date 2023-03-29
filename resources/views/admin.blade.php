@@ -33,12 +33,14 @@
                     <thead class="table-success">
                         <tr >
                             <th>ID Reserva</th>
+                            <th>Enviado Operador</th>
+                            <th>Confirmado Operador</th>
                             <th>Agrupamiento</th>
                             <th>Calendario</th>
                             <th>Cliente</th>
                             <th>Cedula</th>
                             <th>Email</th>
-                            <th>Teléfono</th>
+                            
                             <th>Monto</th>
                             <th>Fecha</th>
                             <th>Notas</th>
@@ -117,15 +119,17 @@
             },            
             columns: [
                 { data: 'id_reserva', name: 'id_reserva' },
+                { data: 'c_envOper', name: 'c_envOper' },
+                { data: 'c_confOper', name: 'c_confOper' },
                 { data: 'agrupamiento', name: 'agrupamiento' },
                 { data: 'calendario', name: 'calendario' },                
                 { data: 'nombre', name: 'nombre' },
                 { data: 'cedula', name: 'cedula' },
                 { data: 'email', name: 'email' },
-                { data: 'telefono', name: 'telefono' },
                 { data: 'monto', name: 'monto' },
                 { data: 'fechareserva', name: 'fechareserva' },
                 { data: 'notes', name: 'notes' },
+                
                 { data: 'action', name: 'action', orderable: false, searchable: false }             
             ],         
             order: [[0, 'desc']]

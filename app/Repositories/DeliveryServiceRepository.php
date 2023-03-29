@@ -2342,7 +2342,9 @@ else
                                                 reserva.c_phone as telefono,
                                                 reserva.amount as monto,
                                                 reserva.date_from as fechareserva, 
-                                                reserva.c_notes as notes 
+                                                reserva.c_notes as notes,
+                                                reserva.c_envOper as c_envOper,  
+                                                reserva.c_confOper as c_confOper 
                                                 FROM delivery_book db, booking_abcalendar_reservations reserva
                                                 WHERE db.id_reserva = reserva.id
                                                 ORDER BY db.created_at DESC"));
